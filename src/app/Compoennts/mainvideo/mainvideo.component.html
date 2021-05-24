@@ -1,0 +1,18 @@
+<div>
+  <div *ngIf="video; then frameId; else notFound"></div>
+  <ng-template #frameId>
+    <div class="ui embed">
+      <iframe
+        [title]="video.snippet.title"
+        [src]="'https://www.youtube.com/embed/' + video?.id?.videoId | safe"
+      ></iframe>
+    </div>
+    <div class="ui segment">
+      <h4 class="ui header">{{ video?.snippet?.title || "" }}</h4>
+      <p>{{ video?.snippet?.description || "" }}</p>
+    </div>
+  </ng-template>
+  <ng-template #notFound>
+    <h1>Please search for the video</h1>
+  </ng-template>
+</div>

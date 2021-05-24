@@ -1,0 +1,7 @@
+<div class="ui relaxed divided list" *ngFor="let video of videos">
+  <app-thumbline
+    [video]="video"
+    (click)="onSlectedVideo(video)"
+  ></app-thumbline>
+</div>
+;
