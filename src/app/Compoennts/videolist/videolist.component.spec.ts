@@ -8,9 +8,8 @@ describe('VideolistComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VideolistComponent ]
-    })
-    .compileComponents();
+      declarations: [VideolistComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -20,6 +19,12 @@ describe('VideolistComponent', () => {
   });
 
   it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should create 2', () => {
+    const app = fixture.debugElement.nativeElement;
+    const length = app.querySelectorAll('app-thumbline').length;
     expect(component).toBeTruthy();
   });
 });

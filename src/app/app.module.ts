@@ -7,7 +7,7 @@ import { HomeComponent } from './Compoennts/home/home.component';
 import { SerachbarComponent } from './Compoennts/serachbar/serachbar.component';
 import { MainvideoComponent } from './Compoennts/mainvideo/mainvideo.component';
 import { ThumblineComponent } from './Compoennts/thumbline/thumbline.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VideolistComponent } from './Compoennts/videolist/videolist.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +23,13 @@ import { LoginComponent } from './Compoennts/login/login.component';
     SafePipe,
     LoginComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
